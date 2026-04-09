@@ -1,0 +1,143 @@
+body {
+    font-family: "poppins", sans-serif;
+    background: url(image/IMG2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, black, rgba(0, 0, 0, 0.627), rgba(0, 0, 0, 0));
+
+    z-index: -1;
+}
+
+
+
+ul {
+    list-style: none;
+    padding-left: 900px;
+
+
+}
+
+.logo img {
+    width: 90px;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 6px 14px;
+    border-radius: 100px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgb(13, 202, 23);
+}
+
+.social-footer {
+
+    color: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 30px;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#fb,
+#yt,
+#twitter,
+#tiktok {
+    color: #ffffff;
+}
+
+.social-footer i {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-footer i:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    transform: scale(1.2);
+}
+
+h1 {
+    font-family: 'Amazing Views';
+    color: #fff;
+    font-size: 100px;
+
+    text-shadow:
+        0 0 40px rgba(162, 160, 160, 0.8),
+        0 0 80px rgba(0, 0, 0, 0.364);
+    position: absolute;
+    justify-items: center;
+    top: 40%;
+    left: 25%;
+}
+
+.text {
+    font-family: 'corbel light', sans-serif;
+    width: 600px;
+    color: #fff;
+    font-size: 30px;
+    position: absolute;
+    bottom: 15%;
+    left: 30%;
+    text-align: center;
+
+}
+
+.text h2 {
+    font-family: 'Amazing Views';
+    letter-spacing: 2px;
+}
+
+.text p {
+    font-weight: bolder;
+}
+
+
+.need {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    color: #000000;
+    background: #ffffff3d;
+    border-radius: 10px;
+}
+
+.need h3 {
+    font-weight: lighter;
+    font-size: 15px;
+}

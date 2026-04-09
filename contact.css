@@ -1,0 +1,461 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #0a0a0a;
+    color: #f5f5f5;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, black, rgba(0, 0, 0, 0.627), rgba(0, 0, 0, 0));
+
+    z-index: 1;
+}
+
+
+
+
+ul {
+    list-style: none;
+    padding-left: 900px;
+
+
+}
+
+.logo img {
+    width: 90px;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 6px 14px;
+    border-radius: 100px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background: rgb(13, 202, 23);
+}
+
+.social-footer {
+
+    color: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 30px;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#fb,
+#yt,
+#twitter,
+#tiktok {
+    color: #ffffff;
+}
+
+.social-footer i {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-footer i:hover {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    transform: scale(1.2);
+}
+
+
+/* ================= HERO SECTION ================= */
+.biodata-hero {
+    padding: 160px 20px 120px;
+    background: linear-gradient(135deg, #0a0a0a 0%, #111 50%, #0a0a0a 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.biodata-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 210, 106, 0.03) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Profile Image */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.profile-container::before {
+    content: '';
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #00d26a, #00ff88);
+    opacity: 0.3;
+    filter: blur(20px);
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: scale(1.05);
+        opacity: 0.5;
+    }
+}
+
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #00d26a;
+    box-shadow: 0 0 40px rgba(0, 210, 106, 0.4), 0 0 80px rgba(0, 210, 106, 0.1);
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.02);
+}
+
+/* Title */
+.biodata-hero h1 {
+    font-size: 52px;
+    font-weight: 800;
+    letter-spacing: 8px;
+    color: #00d26a;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 0 0 40px rgba(0, 210, 106, 0.3);
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #888;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.divider {
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #00d26a, transparent);
+    margin: 0 auto 80px;
+    border-radius: 2px;
+}
+
+/* ================= MAIN CONTENT GRID ================= */
+.biodata-container {
+    max-width: 1400px;
+    margin: 0 auto 100px;
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    text-align: left;
+    position: relative;
+}
+
+.biodata-left,
+.biodata-right {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 50px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.biodata-left:hover,
+.biodata-right:hover {
+    border-color: rgba(0, 210, 106, 0.3);
+    transform: translateY(-5px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.biodata-left h3,
+.biodata-right h3 {
+    color: #00d26a;
+    margin-bottom: 35px;
+    letter-spacing: 3px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.biodata-left h3::before {
+    content: '\f007';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.biodata-right h3::before {
+    content: '\f05a';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.info-item {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.3s ease;
+}
+
+.info-item:hover {
+    border-bottom-color: rgba(0, 210, 106, 0.3);
+    padding-left: 10px;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.info-item span {
+    font-size: 12px;
+    color: #666;
+    display: block;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+.info-item p {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.biodata-right p {
+    color: #aaa;
+    line-height: 2;
+    font-size: 17px;
+    font-weight: 300;
+}
+
+/* ================= EXTRA INFO SECTION ================= */
+.extra-info {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: left;
+}
+
+.info-block {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 40px 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #00d26a, #00ff88);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+
+.info-block h2 {
+    color: #00d26a;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Education Card */
+.education-card {
+    background: linear-gradient(135deg, rgba(0, 210, 106, 0.1) 0%, rgba(0, 0, 0, 0.2) 100%);
+    border: 1px solid rgba(0, 210, 106, 0.2);
+    padding: 30px;
+    border-radius: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+
+.year {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #00d26a;
+    font-size: 13px;
+    font-weight: 700;
+    background: rgba(0, 210, 106, 0.15);
+    padding: 6px 14px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+.education-card p {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* Pills */
+.pill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.pill {
+    border: 1px solid rgba(0, 210, 106, 0.3);
+    background: rgba(0, 210, 106, 0.05);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    color: #ccc;
+    font-weight: 500;
+    cursor: default;
+}
+
+
+
+
+
+.need {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 10px 18px;
+    border-radius: 30px;
+    color: #666;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    z-index: 998;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1200px) {
+    .extra-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .biodata-container {
+        gap: 60px;
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar {
+        padding: 0 30px;
+        height: 70px;
+    }
+
+    .nav-links {
+        gap: 5px;
+    }
+
+    .nav-links a {
+        padding: 8px 15px;
+        font-size: 12px;
+    }
+
+    .biodata-hero h1 {
+        font-size: 36px;
+        letter-spacing: 4px;
+    }
+
+    .biodata-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px;
+    }
+
+    .biodata-left,
+    .biodata-right {
+        padding: 35px;
+    }
+
+    .extra-info {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        gap: 30px;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .profile-container::before {
+        width: 220px;
+        height: 220px;
+    }
+}
